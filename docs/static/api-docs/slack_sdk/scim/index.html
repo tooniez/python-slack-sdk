@@ -2,19 +2,22 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
-<meta name="generator" content="pdoc 0.10.0" />
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+<meta name="generator" content="pdoc3 0.11.3">
 <title>slack_sdk.scim API documentation</title>
 <meta name="description" content="SCIM API is a set of APIs for provisioning and managing user accounts and groups.
-SCIM is used by Single Sign-On (SSO) services and identity providers …" />
-<link rel="preload stylesheet" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/11.0.1/sanitize.min.css" integrity="sha256-PK9q560IAAa6WVRRh76LtCaI8pjTJ2z11v0miyNNjrs=" crossorigin>
-<link rel="preload stylesheet" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/11.0.1/typography.min.css" integrity="sha256-7l/o7C8jubJiy74VsKTidCy1yBkRtiUGbVkYBylBqUg=" crossorigin>
-<link rel="stylesheet preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/styles/github.min.css" crossorigin>
-<style>:root{--highlight-color:#fe9}.flex{display:flex !important}body{line-height:1.5em}#content{padding:20px}#sidebar{padding:30px;overflow:hidden}#sidebar > *:last-child{margin-bottom:2cm}.http-server-breadcrumbs{font-size:130%;margin:0 0 15px 0}#footer{font-size:.75em;padding:5px 30px;border-top:1px solid #ddd;text-align:right}#footer p{margin:0 0 0 1em;display:inline-block}#footer p:last-child{margin-right:30px}h1,h2,h3,h4,h5{font-weight:300}h1{font-size:2.5em;line-height:1.1em}h2{font-size:1.75em;margin:1em 0 .50em 0}h3{font-size:1.4em;margin:25px 0 10px 0}h4{margin:0;font-size:105%}h1:target,h2:target,h3:target,h4:target,h5:target,h6:target{background:var(--highlight-color);padding:.2em 0}a{color:#058;text-decoration:none;transition:color .3s ease-in-out}a:hover{color:#e82}.title code{font-weight:bold}h2[id^="header-"]{margin-top:2em}.ident{color:#900}pre code{background:#f8f8f8;font-size:.8em;line-height:1.4em}code{background:#f2f2f1;padding:1px 4px;overflow-wrap:break-word}h1 code{background:transparent}pre{background:#f8f8f8;border:0;border-top:1px solid #ccc;border-bottom:1px solid #ccc;margin:1em 0;padding:1ex}#http-server-module-list{display:flex;flex-flow:column}#http-server-module-list div{display:flex}#http-server-module-list dt{min-width:10%}#http-server-module-list p{margin-top:0}.toc ul,#index{list-style-type:none;margin:0;padding:0}#index code{background:transparent}#index h3{border-bottom:1px solid #ddd}#index ul{padding:0}#index h4{margin-top:.6em;font-weight:bold}@media (min-width:200ex){#index .two-column{column-count:2}}@media (min-width:300ex){#index .two-column{column-count:3}}dl{margin-bottom:2em}dl dl:last-child{margin-bottom:4em}dd{margin:0 0 1em 3em}#header-classes + dl > dd{margin-bottom:3em}dd dd{margin-left:2em}dd p{margin:10px 0}.name{background:#eee;font-weight:bold;font-size:.85em;padding:5px 10px;display:inline-block;min-width:40%}.name:hover{background:#e0e0e0}dt:target .name{background:var(--highlight-color)}.name > span:first-child{white-space:nowrap}.name.class > span:nth-child(2){margin-left:.4em}.inherited{color:#999;border-left:5px solid #eee;padding-left:1em}.inheritance em{font-style:normal;font-weight:bold}.desc h2{font-weight:400;font-size:1.25em}.desc h3{font-size:1em}.desc dt code{background:inherit}.source summary,.git-link-div{color:#666;text-align:right;font-weight:400;font-size:.8em;text-transform:uppercase}.source summary > *{white-space:nowrap;cursor:pointer}.git-link{color:inherit;margin-left:1em}.source pre{max-height:500px;overflow:auto;margin:0}.source pre code{font-size:12px;overflow:visible}.hlist{list-style:none}.hlist li{display:inline}.hlist li:after{content:',\2002'}.hlist li:last-child:after{content:none}.hlist .hlist{display:inline;padding-left:1em}img{max-width:100%}td{padding:0 .5em}.admonition{padding:.1em .5em;margin-bottom:1em}.admonition-title{font-weight:bold}.admonition.note,.admonition.info,.admonition.important{background:#aef}.admonition.todo,.admonition.versionadded,.admonition.tip,.admonition.hint{background:#dfd}.admonition.warning,.admonition.versionchanged,.admonition.deprecated{background:#fd4}.admonition.error,.admonition.danger,.admonition.caution{background:lightpink}</style>
-<style media="screen and (min-width: 700px)">@media screen and (min-width:700px){#sidebar{width:30%;height:100vh;overflow:auto;position:sticky;top:0}#content{width:70%;max-width:100ch;padding:3em 4em;border-left:1px solid #ddd}pre code{font-size:1em}.item .name{font-size:1em}main{display:flex;flex-direction:row-reverse;justify-content:flex-end}.toc ul ul,#index ul{padding-left:1.5em}.toc > ul > li{margin-top:.5em}}</style>
+SCIM is used by Single Sign-On (SSO) services and identity providers …">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/13.0.0/sanitize.min.css" integrity="sha512-y1dtMcuvtTMJc1yPgEqF0ZjQbhnc/bFhyvIyVNb9Zk5mIGtqVaAB1Ttl28su8AvFMOY0EwRbAe+HCLqj6W7/KA==" crossorigin>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/13.0.0/typography.min.css" integrity="sha512-Y1DYSb995BAfxobCkKepB1BqJJTPrOp3zPL74AWFugHHmmdcvO+C48WLrUOlhGMc0QG7AE3f7gmvvcrmX2fDoA==" crossorigin>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/default.min.css" crossorigin>
+<style>:root{--highlight-color:#fe9}.flex{display:flex !important}body{line-height:1.5em}#content{padding:20px}#sidebar{padding:1.5em;overflow:hidden}#sidebar > *:last-child{margin-bottom:2cm}.http-server-breadcrumbs{font-size:130%;margin:0 0 15px 0}#footer{font-size:.75em;padding:5px 30px;border-top:1px solid #ddd;text-align:right}#footer p{margin:0 0 0 1em;display:inline-block}#footer p:last-child{margin-right:30px}h1,h2,h3,h4,h5{font-weight:300}h1{font-size:2.5em;line-height:1.1em}h2{font-size:1.75em;margin:2em 0 .50em 0}h3{font-size:1.4em;margin:1.6em 0 .7em 0}h4{margin:0;font-size:105%}h1:target,h2:target,h3:target,h4:target,h5:target,h6:target{background:var(--highlight-color);padding:.2em 0}a{color:#058;text-decoration:none;transition:color .2s ease-in-out}a:visited{color:#503}a:hover{color:#b62}.title code{font-weight:bold}h2[id^="header-"]{margin-top:2em}.ident{color:#900;font-weight:bold}pre code{font-size:.8em;line-height:1.4em;padding:1em;display:block}code{background:#f3f3f3;font-family:"DejaVu Sans Mono",monospace;padding:1px 4px;overflow-wrap:break-word}h1 code{background:transparent}pre{border-top:1px solid #ccc;border-bottom:1px solid #ccc;margin:1em 0}#http-server-module-list{display:flex;flex-flow:column}#http-server-module-list div{display:flex}#http-server-module-list dt{min-width:10%}#http-server-module-list p{margin-top:0}.toc ul,#index{list-style-type:none;margin:0;padding:0}#index code{background:transparent}#index h3{border-bottom:1px solid #ddd}#index ul{padding:0}#index h4{margin-top:.6em;font-weight:bold}@media (min-width:200ex){#index .two-column{column-count:2}}@media (min-width:300ex){#index .two-column{column-count:3}}dl{margin-bottom:2em}dl dl:last-child{margin-bottom:4em}dd{margin:0 0 1em 3em}#header-classes + dl > dd{margin-bottom:3em}dd dd{margin-left:2em}dd p{margin:10px 0}.name{background:#eee;font-size:.85em;padding:5px 10px;display:inline-block;min-width:40%}.name:hover{background:#e0e0e0}dt:target .name{background:var(--highlight-color)}.name > span:first-child{white-space:nowrap}.name.class > span:nth-child(2){margin-left:.4em}.inherited{color:#999;border-left:5px solid #eee;padding-left:1em}.inheritance em{font-style:normal;font-weight:bold}.desc h2{font-weight:400;font-size:1.25em}.desc h3{font-size:1em}.desc dt code{background:inherit}.source summary,.git-link-div{color:#666;text-align:right;font-weight:400;font-size:.8em;text-transform:uppercase}.source summary > *{white-space:nowrap;cursor:pointer}.git-link{color:inherit;margin-left:1em}.source pre{max-height:500px;overflow:auto;margin:0}.source pre code{font-size:12px;overflow:visible}.hlist{list-style:none}.hlist li{display:inline}.hlist li:after{content:',\2002'}.hlist li:last-child:after{content:none}.hlist .hlist{display:inline;padding-left:1em}img{max-width:100%}td{padding:0 .5em}.admonition{padding:.1em 1em;margin:1em 0}.admonition-title{font-weight:bold}.admonition.note,.admonition.info,.admonition.important{background:#aef}.admonition.todo,.admonition.versionadded,.admonition.tip,.admonition.hint{background:#dfd}.admonition.warning,.admonition.versionchanged,.admonition.deprecated{background:#fd4}.admonition.error,.admonition.danger,.admonition.caution{background:lightpink}</style>
+<style media="screen and (min-width: 700px)">@media screen and (min-width:700px){#sidebar{width:30%;height:100vh;overflow:auto;position:sticky;top:0}#content{width:70%;max-width:100ch;padding:3em 4em;border-left:1px solid #ddd}pre code{font-size:1em}.name{font-size:1em}main{display:flex;flex-direction:row-reverse;justify-content:flex-end}.toc ul ul,#index ul ul{padding-left:1em}.toc > ul > li{margin-top:.5em}}</style>
 <style media="print">@media print{#sidebar h1{page-break-before:always}.source{display:none}}@media print{*{background:transparent !important;color:#000 !important;box-shadow:none !important;text-shadow:none !important}a[href]:after{content:" (" attr(href) ")";font-size:90%}a[href][title]:after{content:none}abbr[title]:after{content:" (" attr(title) ")"}.ir a:after,a[href^="javascript:"]:after,a[href^="#"]:after{content:""}pre,blockquote{border:1px solid #999;page-break-inside:avoid}thead{display:table-header-group}tr,img{page-break-inside:avoid}img{max-width:100% !important}@page{margin:0.5cm}p,h2,h3{orphans:3;widows:3}h1,h2,h3,h4,h5,h6{page-break-after:avoid}}</style>
-<script defer src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/highlight.min.js" integrity="sha256-Uv3H6lx7dJmRfRvH8TH6kJD1TSK1aFcwgx+mdg3epi8=" crossorigin></script>
-<script>window.addEventListener('DOMContentLoaded', () => hljs.initHighlighting())</script>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js" integrity="sha512-D9gUyxqja7hBtkWpPWGt9wfbfaMGVt9gnyCvYa+jojwwPHLCzUm5i8rpk7vD7wNee9bA35eYIjobYPaQuKS1MQ==" crossorigin></script>
+<script>window.addEventListener('DOMContentLoaded', () => {
+hljs.configure({languages: ['bash', 'css', 'diff', 'graphql', 'ini', 'javascript', 'json', 'plaintext', 'python', 'python-repl', 'rust', 'shell', 'sql', 'typescript', 'xml', 'yaml']});
+hljs.highlightAll();
+})</script>
 </head>
 <body>
 <main>
@@ -27,34 +30,6 @@ SCIM is used by Single Sign-On (SSO) services and identity providers …" />
 SCIM is used by Single Sign-On (SSO) services and identity providers to manage people across a variety of tools,
 including Slack.</p>
 <p>Refer to <a href="https://slack.dev/python-slack-sdk/scim/">https://slack.dev/python-slack-sdk/scim/</a> for details.</p>
-<details class="source">
-<summary>
-<span>Expand source code</span>
-</summary>
-<pre><code class="python">&#34;&#34;&#34;SCIM API is a set of APIs for provisioning and managing user accounts and groups.
-SCIM is used by Single Sign-On (SSO) services and identity providers to manage people across a variety of tools,
-including Slack.
-
-Refer to https://slack.dev/python-slack-sdk/scim/ for details.
-&#34;&#34;&#34;
-from .v1.client import SCIMClient
-from .v1.response import SCIMResponse
-from .v1.response import SearchUsersResponse, ReadUserResponse
-from .v1.response import SearchGroupsResponse, ReadGroupResponse
-from .v1.user import User
-from .v1.group import Group
-
-__all__ = [
-    &#34;SCIMClient&#34;,
-    &#34;SCIMResponse&#34;,
-    &#34;SearchUsersResponse&#34;,
-    &#34;ReadUserResponse&#34;,
-    &#34;SearchGroupsResponse&#34;,
-    &#34;ReadGroupResponse&#34;,
-    &#34;User&#34;,
-    &#34;Group&#34;,
-]</code></pre>
-</details>
 </section>
 <section>
 <h2 class="section-title" id="header-submodules">Sub-modules</h2>
@@ -79,7 +54,7 @@ SCIM is used by Single Sign-On (SSO) services and identity providers …</p></di
 <dl>
 <dt id="slack_sdk.scim.Group"><code class="flex name class">
 <span>class <span class="ident">Group</span></span>
-<span>(</span><span>*, display_name: Union[str, ForwardRef(None), <a title="slack_sdk.scim.v1.default_arg.DefaultArg" href="v1/default_arg.html#slack_sdk.scim.v1.default_arg.DefaultArg">DefaultArg</a>] = &lt;slack_sdk.scim.v1.default_arg.DefaultArg object&gt;, id: Union[str, ForwardRef(None), <a title="slack_sdk.scim.v1.default_arg.DefaultArg" href="v1/default_arg.html#slack_sdk.scim.v1.default_arg.DefaultArg">DefaultArg</a>] = &lt;slack_sdk.scim.v1.default_arg.DefaultArg object&gt;, members: Union[List[<a title="slack_sdk.scim.v1.group.GroupMember" href="v1/group.html#slack_sdk.scim.v1.group.GroupMember">GroupMember</a>], ForwardRef(None), <a title="slack_sdk.scim.v1.default_arg.DefaultArg" href="v1/default_arg.html#slack_sdk.scim.v1.default_arg.DefaultArg">DefaultArg</a>] = &lt;slack_sdk.scim.v1.default_arg.DefaultArg object&gt;, meta: Union[<a title="slack_sdk.scim.v1.group.GroupMeta" href="v1/group.html#slack_sdk.scim.v1.group.GroupMeta">GroupMeta</a>, ForwardRef(None), <a title="slack_sdk.scim.v1.default_arg.DefaultArg" href="v1/default_arg.html#slack_sdk.scim.v1.default_arg.DefaultArg">DefaultArg</a>] = &lt;slack_sdk.scim.v1.default_arg.DefaultArg object&gt;, schemas: Union[List[str], ForwardRef(None), <a title="slack_sdk.scim.v1.default_arg.DefaultArg" href="v1/default_arg.html#slack_sdk.scim.v1.default_arg.DefaultArg">DefaultArg</a>] = &lt;slack_sdk.scim.v1.default_arg.DefaultArg object&gt;, **kwargs)</span>
+<span>(</span><span>*,<br>display_name: str | <a title="slack_sdk.scim.v1.default_arg.DefaultArg" href="v1/default_arg.html#slack_sdk.scim.v1.default_arg.DefaultArg">DefaultArg</a> | None = &lt;slack_sdk.scim.v1.default_arg.DefaultArg object&gt;,<br>id: str | <a title="slack_sdk.scim.v1.default_arg.DefaultArg" href="v1/default_arg.html#slack_sdk.scim.v1.default_arg.DefaultArg">DefaultArg</a> | None = &lt;slack_sdk.scim.v1.default_arg.DefaultArg object&gt;,<br>members: List[<a title="slack_sdk.scim.v1.group.GroupMember" href="v1/group.html#slack_sdk.scim.v1.group.GroupMember">GroupMember</a>] | <a title="slack_sdk.scim.v1.default_arg.DefaultArg" href="v1/default_arg.html#slack_sdk.scim.v1.default_arg.DefaultArg">DefaultArg</a> | None = &lt;slack_sdk.scim.v1.default_arg.DefaultArg object&gt;,<br>meta: <a title="slack_sdk.scim.v1.group.GroupMeta" href="v1/group.html#slack_sdk.scim.v1.group.GroupMeta">GroupMeta</a> | <a title="slack_sdk.scim.v1.default_arg.DefaultArg" href="v1/default_arg.html#slack_sdk.scim.v1.default_arg.DefaultArg">DefaultArg</a> | None = &lt;slack_sdk.scim.v1.default_arg.DefaultArg object&gt;,<br>schemas: List[str] | <a title="slack_sdk.scim.v1.default_arg.DefaultArg" href="v1/default_arg.html#slack_sdk.scim.v1.default_arg.DefaultArg">DefaultArg</a> | None = &lt;slack_sdk.scim.v1.default_arg.DefaultArg object&gt;,<br>**kwargs)</span>
 </code></dt>
 <dd>
 <div class="desc"></div>
@@ -122,29 +97,29 @@ SCIM is used by Single Sign-On (SSO) services and identity providers …</p></di
 </details>
 <h3>Class variables</h3>
 <dl>
-<dt id="slack_sdk.scim.Group.display_name"><code class="name">var <span class="ident">display_name</span> : Union[str, ForwardRef(None), <a title="slack_sdk.scim.v1.default_arg.DefaultArg" href="v1/default_arg.html#slack_sdk.scim.v1.default_arg.DefaultArg">DefaultArg</a>]</code></dt>
+<dt id="slack_sdk.scim.Group.display_name"><code class="name">var <span class="ident">display_name</span> : str | <a title="slack_sdk.scim.v1.default_arg.DefaultArg" href="v1/default_arg.html#slack_sdk.scim.v1.default_arg.DefaultArg">DefaultArg</a> | None</code></dt>
 <dd>
-<div class="desc"></div>
+<div class="desc"><p>The type of the None singleton.</p></div>
 </dd>
-<dt id="slack_sdk.scim.Group.id"><code class="name">var <span class="ident">id</span> : Union[str, ForwardRef(None), <a title="slack_sdk.scim.v1.default_arg.DefaultArg" href="v1/default_arg.html#slack_sdk.scim.v1.default_arg.DefaultArg">DefaultArg</a>]</code></dt>
+<dt id="slack_sdk.scim.Group.id"><code class="name">var <span class="ident">id</span> : str | <a title="slack_sdk.scim.v1.default_arg.DefaultArg" href="v1/default_arg.html#slack_sdk.scim.v1.default_arg.DefaultArg">DefaultArg</a> | None</code></dt>
 <dd>
-<div class="desc"></div>
+<div class="desc"><p>The type of the None singleton.</p></div>
 </dd>
-<dt id="slack_sdk.scim.Group.members"><code class="name">var <span class="ident">members</span> : Union[List[<a title="slack_sdk.scim.v1.group.GroupMember" href="v1/group.html#slack_sdk.scim.v1.group.GroupMember">GroupMember</a>], ForwardRef(None), <a title="slack_sdk.scim.v1.default_arg.DefaultArg" href="v1/default_arg.html#slack_sdk.scim.v1.default_arg.DefaultArg">DefaultArg</a>]</code></dt>
+<dt id="slack_sdk.scim.Group.members"><code class="name">var <span class="ident">members</span> : List[<a title="slack_sdk.scim.v1.group.GroupMember" href="v1/group.html#slack_sdk.scim.v1.group.GroupMember">GroupMember</a>] | <a title="slack_sdk.scim.v1.default_arg.DefaultArg" href="v1/default_arg.html#slack_sdk.scim.v1.default_arg.DefaultArg">DefaultArg</a> | None</code></dt>
 <dd>
-<div class="desc"></div>
+<div class="desc"><p>The type of the None singleton.</p></div>
 </dd>
-<dt id="slack_sdk.scim.Group.meta"><code class="name">var <span class="ident">meta</span> : Union[<a title="slack_sdk.scim.v1.group.GroupMeta" href="v1/group.html#slack_sdk.scim.v1.group.GroupMeta">GroupMeta</a>, ForwardRef(None), <a title="slack_sdk.scim.v1.default_arg.DefaultArg" href="v1/default_arg.html#slack_sdk.scim.v1.default_arg.DefaultArg">DefaultArg</a>]</code></dt>
+<dt id="slack_sdk.scim.Group.meta"><code class="name">var <span class="ident">meta</span> : <a title="slack_sdk.scim.v1.group.GroupMeta" href="v1/group.html#slack_sdk.scim.v1.group.GroupMeta">GroupMeta</a> | <a title="slack_sdk.scim.v1.default_arg.DefaultArg" href="v1/default_arg.html#slack_sdk.scim.v1.default_arg.DefaultArg">DefaultArg</a> | None</code></dt>
 <dd>
-<div class="desc"></div>
+<div class="desc"><p>The type of the None singleton.</p></div>
 </dd>
-<dt id="slack_sdk.scim.Group.schemas"><code class="name">var <span class="ident">schemas</span> : Union[List[str], ForwardRef(None), <a title="slack_sdk.scim.v1.default_arg.DefaultArg" href="v1/default_arg.html#slack_sdk.scim.v1.default_arg.DefaultArg">DefaultArg</a>]</code></dt>
+<dt id="slack_sdk.scim.Group.schemas"><code class="name">var <span class="ident">schemas</span> : List[str] | <a title="slack_sdk.scim.v1.default_arg.DefaultArg" href="v1/default_arg.html#slack_sdk.scim.v1.default_arg.DefaultArg">DefaultArg</a> | None</code></dt>
 <dd>
-<div class="desc"></div>
+<div class="desc"><p>The type of the None singleton.</p></div>
 </dd>
 <dt id="slack_sdk.scim.Group.unknown_fields"><code class="name">var <span class="ident">unknown_fields</span> : Dict[str, Any]</code></dt>
 <dd>
-<div class="desc"></div>
+<div class="desc"><p>The type of the None singleton.</p></div>
 </dd>
 </dl>
 <h3>Methods</h3>
@@ -154,13 +129,6 @@ SCIM is used by Single Sign-On (SSO) services and identity providers …</p></di
 </code></dt>
 <dd>
 <div class="desc"></div>
-<details class="source">
-<summary>
-<span>Expand source code</span>
-</summary>
-<pre><code class="python">def to_dict(self):
-    return _to_dict_without_not_given(self)</code></pre>
-</details>
 </dd>
 </dl>
 </dd>
@@ -196,7 +164,7 @@ SCIM is used by Single Sign-On (SSO) services and identity providers …</p></di
 </ul>
 <h3>Instance variables</h3>
 <dl>
-<dt id="slack_sdk.scim.ReadGroupResponse.group"><code class="name">var <span class="ident">group</span> : <a title="slack_sdk.scim.v1.group.Group" href="v1/group.html#slack_sdk.scim.v1.group.Group">Group</a></code></dt>
+<dt id="slack_sdk.scim.ReadGroupResponse.group"><code class="name">prop <span class="ident">group</span> : <a title="slack_sdk.scim.v1.group.Group" href="v1/group.html#slack_sdk.scim.v1.group.Group">Group</a></code></dt>
 <dd>
 <div class="desc"></div>
 <details class="source">
@@ -209,6 +177,18 @@ def group(self) -&gt; Group:  # type: ignore
 </details>
 </dd>
 </dl>
+<h3>Inherited members</h3>
+<ul class="hlist">
+<li><code><b><a title="slack_sdk.scim.v1.response.SCIMResponse" href="v1/response.html#slack_sdk.scim.v1.response.SCIMResponse">SCIMResponse</a></b></code>:
+<ul class="hlist">
+<li><code><a title="slack_sdk.scim.v1.response.SCIMResponse.body" href="v1/response.html#slack_sdk.scim.v1.response.SCIMResponse.body">body</a></code></li>
+<li><code><a title="slack_sdk.scim.v1.response.SCIMResponse.headers" href="v1/response.html#slack_sdk.scim.v1.response.SCIMResponse.headers">headers</a></code></li>
+<li><code><a title="slack_sdk.scim.v1.response.SCIMResponse.raw_body" href="v1/response.html#slack_sdk.scim.v1.response.SCIMResponse.raw_body">raw_body</a></code></li>
+<li><code><a title="slack_sdk.scim.v1.response.SCIMResponse.status_code" href="v1/response.html#slack_sdk.scim.v1.response.SCIMResponse.status_code">status_code</a></code></li>
+<li><code><a title="slack_sdk.scim.v1.response.SCIMResponse.url" href="v1/response.html#slack_sdk.scim.v1.response.SCIMResponse.url">url</a></code></li>
+</ul>
+</li>
+</ul>
 </dd>
 <dt id="slack_sdk.scim.ReadUserResponse"><code class="flex name class">
 <span>class <span class="ident">ReadUserResponse</span></span>
@@ -242,7 +222,7 @@ def group(self) -&gt; Group:  # type: ignore
 </ul>
 <h3>Instance variables</h3>
 <dl>
-<dt id="slack_sdk.scim.ReadUserResponse.user"><code class="name">var <span class="ident">user</span> : <a title="slack_sdk.scim.v1.user.User" href="v1/user.html#slack_sdk.scim.v1.user.User">User</a></code></dt>
+<dt id="slack_sdk.scim.ReadUserResponse.user"><code class="name">prop <span class="ident">user</span> : <a title="slack_sdk.scim.v1.user.User" href="v1/user.html#slack_sdk.scim.v1.user.User">User</a></code></dt>
 <dd>
 <div class="desc"></div>
 <details class="source">
@@ -255,10 +235,22 @@ def user(self) -&gt; User:  # type: ignore
 </details>
 </dd>
 </dl>
+<h3>Inherited members</h3>
+<ul class="hlist">
+<li><code><b><a title="slack_sdk.scim.v1.response.SCIMResponse" href="v1/response.html#slack_sdk.scim.v1.response.SCIMResponse">SCIMResponse</a></b></code>:
+<ul class="hlist">
+<li><code><a title="slack_sdk.scim.v1.response.SCIMResponse.body" href="v1/response.html#slack_sdk.scim.v1.response.SCIMResponse.body">body</a></code></li>
+<li><code><a title="slack_sdk.scim.v1.response.SCIMResponse.headers" href="v1/response.html#slack_sdk.scim.v1.response.SCIMResponse.headers">headers</a></code></li>
+<li><code><a title="slack_sdk.scim.v1.response.SCIMResponse.raw_body" href="v1/response.html#slack_sdk.scim.v1.response.SCIMResponse.raw_body">raw_body</a></code></li>
+<li><code><a title="slack_sdk.scim.v1.response.SCIMResponse.status_code" href="v1/response.html#slack_sdk.scim.v1.response.SCIMResponse.status_code">status_code</a></code></li>
+<li><code><a title="slack_sdk.scim.v1.response.SCIMResponse.url" href="v1/response.html#slack_sdk.scim.v1.response.SCIMResponse.url">url</a></code></li>
+</ul>
+</li>
+</ul>
 </dd>
 <dt id="slack_sdk.scim.SCIMClient"><code class="flex name class">
 <span>class <span class="ident">SCIMClient</span></span>
-<span>(</span><span>token: str, timeout: int = 30, ssl: Optional[ssl.SSLContext] = None, proxy: Optional[str] = None, base_url: str = 'https://api.slack.com/scim/v1/', default_headers: Optional[Dict[str, str]] = None, user_agent_prefix: Optional[str] = None, user_agent_suffix: Optional[str] = None, logger: Optional[logging.Logger] = None, retry_handlers: Optional[List[<a title="slack_sdk.http_retry.handler.RetryHandler" href="../http_retry/handler.html#slack_sdk.http_retry.handler.RetryHandler">RetryHandler</a>]] = None)</span>
+<span>(</span><span>token: str,<br>timeout: int = 30,<br>ssl: ssl.SSLContext | None = None,<br>proxy: str | None = None,<br>base_url: str = 'https://api.slack.com/scim/v1/',<br>default_headers: Dict[str, str] | None = None,<br>user_agent_prefix: str | None = None,<br>user_agent_suffix: str | None = None,<br>logger: logging.Logger | None = None,<br>retry_handlers: List[<a title="slack_sdk.http_retry.handler.RetryHandler" href="../http_retry/handler.html#slack_sdk.http_retry.handler.RetryHandler">RetryHandler</a>] | None = None)</span>
 </code></dt>
 <dd>
 <div class="desc"><p>API client for SCIM API
@@ -662,326 +654,126 @@ See <a href="https://api.slack.com/scim">https://api.slack.com/scim</a> for more
 <dl>
 <dt id="slack_sdk.scim.SCIMClient.BASE_URL"><code class="name">var <span class="ident">BASE_URL</span></code></dt>
 <dd>
-<div class="desc"></div>
+<div class="desc"><p>The type of the None singleton.</p></div>
 </dd>
 <dt id="slack_sdk.scim.SCIMClient.base_url"><code class="name">var <span class="ident">base_url</span> : str</code></dt>
 <dd>
-<div class="desc"></div>
+<div class="desc"><p>The type of the None singleton.</p></div>
 </dd>
 <dt id="slack_sdk.scim.SCIMClient.default_headers"><code class="name">var <span class="ident">default_headers</span> : Dict[str, str]</code></dt>
 <dd>
-<div class="desc"></div>
+<div class="desc"><p>The type of the None singleton.</p></div>
 </dd>
 <dt id="slack_sdk.scim.SCIMClient.logger"><code class="name">var <span class="ident">logger</span> : logging.Logger</code></dt>
 <dd>
-<div class="desc"></div>
+<div class="desc"><p>The type of the None singleton.</p></div>
 </dd>
-<dt id="slack_sdk.scim.SCIMClient.proxy"><code class="name">var <span class="ident">proxy</span> : Optional[str]</code></dt>
+<dt id="slack_sdk.scim.SCIMClient.proxy"><code class="name">var <span class="ident">proxy</span> : str | None</code></dt>
 <dd>
-<div class="desc"></div>
+<div class="desc"><p>The type of the None singleton.</p></div>
 </dd>
 <dt id="slack_sdk.scim.SCIMClient.retry_handlers"><code class="name">var <span class="ident">retry_handlers</span> : List[<a title="slack_sdk.http_retry.handler.RetryHandler" href="../http_retry/handler.html#slack_sdk.http_retry.handler.RetryHandler">RetryHandler</a>]</code></dt>
 <dd>
-<div class="desc"></div>
+<div class="desc"><p>The type of the None singleton.</p></div>
 </dd>
-<dt id="slack_sdk.scim.SCIMClient.ssl"><code class="name">var <span class="ident">ssl</span> : Optional[ssl.SSLContext]</code></dt>
+<dt id="slack_sdk.scim.SCIMClient.ssl"><code class="name">var <span class="ident">ssl</span> : ssl.SSLContext | None</code></dt>
 <dd>
-<div class="desc"></div>
+<div class="desc"><p>The type of the None singleton.</p></div>
 </dd>
 <dt id="slack_sdk.scim.SCIMClient.timeout"><code class="name">var <span class="ident">timeout</span> : int</code></dt>
 <dd>
-<div class="desc"></div>
+<div class="desc"><p>The type of the None singleton.</p></div>
 </dd>
 <dt id="slack_sdk.scim.SCIMClient.token"><code class="name">var <span class="ident">token</span> : str</code></dt>
 <dd>
-<div class="desc"></div>
+<div class="desc"><p>The type of the None singleton.</p></div>
 </dd>
 </dl>
 <h3>Methods</h3>
 <dl>
 <dt id="slack_sdk.scim.SCIMClient.api_call"><code class="name flex">
-<span>def <span class="ident">api_call</span></span>(<span>self, *, http_verb: str, path: str, query_params: Optional[Dict[str, Any]] = None, body_params: Optional[Dict[str, Any]] = None, headers: Optional[Dict[str, str]] = None) ‑> <a title="slack_sdk.scim.v1.response.SCIMResponse" href="v1/response.html#slack_sdk.scim.v1.response.SCIMResponse">SCIMResponse</a></span>
+<span>def <span class="ident">api_call</span></span>(<span>self,<br>*,<br>http_verb: str,<br>path: str,<br>query_params: Dict[str, Any] | None = None,<br>body_params: Dict[str, Any] | None = None,<br>headers: Dict[str, str] | None = None) ‑> <a title="slack_sdk.scim.v1.response.SCIMResponse" href="v1/response.html#slack_sdk.scim.v1.response.SCIMResponse">SCIMResponse</a></span>
 </code></dt>
 <dd>
 <div class="desc"><p>Performs a Slack API request and returns the result.</p></div>
-<details class="source">
-<summary>
-<span>Expand source code</span>
-</summary>
-<pre><code class="python">def api_call(
-    self,
-    *,
-    http_verb: str,
-    path: str,
-    query_params: Optional[Dict[str, Any]] = None,
-    body_params: Optional[Dict[str, Any]] = None,
-    headers: Optional[Dict[str, str]] = None,
-) -&gt; SCIMResponse:
-    &#34;&#34;&#34;Performs a Slack API request and returns the result.&#34;&#34;&#34;
-    url = f&#34;{self.base_url}{path}&#34;
-    query = _build_query(query_params)
-    if len(query) &gt; 0:
-        url += f&#34;?{query}&#34;
-
-    return self._perform_http_request(
-        http_verb=http_verb,
-        url=url,
-        body=body_params,
-        headers=_build_request_headers(
-            token=self.token,
-            default_headers=self.default_headers,
-            additional_headers=headers,
-        ),
-    )</code></pre>
-</details>
 </dd>
 <dt id="slack_sdk.scim.SCIMClient.create_group"><code class="name flex">
-<span>def <span class="ident">create_group</span></span>(<span>self, group: Union[Dict[str, Any], <a title="slack_sdk.scim.v1.group.Group" href="v1/group.html#slack_sdk.scim.v1.group.Group">Group</a>]) ‑> <a title="slack_sdk.scim.v1.response.GroupCreateResponse" href="v1/response.html#slack_sdk.scim.v1.response.GroupCreateResponse">GroupCreateResponse</a></span>
+<span>def <span class="ident">create_group</span></span>(<span>self,<br>group: Dict[str, Any] | <a title="slack_sdk.scim.v1.group.Group" href="v1/group.html#slack_sdk.scim.v1.group.Group">Group</a>) ‑> <a title="slack_sdk.scim.v1.response.GroupCreateResponse" href="v1/response.html#slack_sdk.scim.v1.response.GroupCreateResponse">GroupCreateResponse</a></span>
 </code></dt>
 <dd>
 <div class="desc"></div>
-<details class="source">
-<summary>
-<span>Expand source code</span>
-</summary>
-<pre><code class="python">def create_group(self, group: Union[Dict[str, Any], Group]) -&gt; GroupCreateResponse:
-    return GroupCreateResponse(
-        self.api_call(
-            http_verb=&#34;POST&#34;,
-            path=&#34;Groups&#34;,
-            body_params=group.to_dict() if isinstance(group, Group) else _to_dict_without_not_given(group),
-        )
-    )</code></pre>
-</details>
 </dd>
 <dt id="slack_sdk.scim.SCIMClient.create_user"><code class="name flex">
-<span>def <span class="ident">create_user</span></span>(<span>self, user: Union[Dict[str, Any], <a title="slack_sdk.scim.v1.user.User" href="v1/user.html#slack_sdk.scim.v1.user.User">User</a>]) ‑> <a title="slack_sdk.scim.v1.response.UserCreateResponse" href="v1/response.html#slack_sdk.scim.v1.response.UserCreateResponse">UserCreateResponse</a></span>
+<span>def <span class="ident">create_user</span></span>(<span>self,<br>user: Dict[str, Any] | <a title="slack_sdk.scim.v1.user.User" href="v1/user.html#slack_sdk.scim.v1.user.User">User</a>) ‑> <a title="slack_sdk.scim.v1.response.UserCreateResponse" href="v1/response.html#slack_sdk.scim.v1.response.UserCreateResponse">UserCreateResponse</a></span>
 </code></dt>
 <dd>
 <div class="desc"></div>
-<details class="source">
-<summary>
-<span>Expand source code</span>
-</summary>
-<pre><code class="python">def create_user(self, user: Union[Dict[str, Any], User]) -&gt; UserCreateResponse:
-    return UserCreateResponse(
-        self.api_call(
-            http_verb=&#34;POST&#34;,
-            path=&#34;Users&#34;,
-            body_params=user.to_dict() if isinstance(user, User) else _to_dict_without_not_given(user),
-        )
-    )</code></pre>
-</details>
 </dd>
 <dt id="slack_sdk.scim.SCIMClient.delete_group"><code class="name flex">
 <span>def <span class="ident">delete_group</span></span>(<span>self, id: str) ‑> <a title="slack_sdk.scim.v1.response.GroupDeleteResponse" href="v1/response.html#slack_sdk.scim.v1.response.GroupDeleteResponse">GroupDeleteResponse</a></span>
 </code></dt>
 <dd>
 <div class="desc"></div>
-<details class="source">
-<summary>
-<span>Expand source code</span>
-</summary>
-<pre><code class="python">def delete_group(self, id: str) -&gt; GroupDeleteResponse:
-    return GroupDeleteResponse(
-        self.api_call(
-            http_verb=&#34;DELETE&#34;,
-            path=f&#34;Groups/{quote(id)}&#34;,
-        )
-    )</code></pre>
-</details>
 </dd>
 <dt id="slack_sdk.scim.SCIMClient.delete_user"><code class="name flex">
 <span>def <span class="ident">delete_user</span></span>(<span>self, id: str) ‑> <a title="slack_sdk.scim.v1.response.UserDeleteResponse" href="v1/response.html#slack_sdk.scim.v1.response.UserDeleteResponse">UserDeleteResponse</a></span>
 </code></dt>
 <dd>
 <div class="desc"></div>
-<details class="source">
-<summary>
-<span>Expand source code</span>
-</summary>
-<pre><code class="python">def delete_user(self, id: str) -&gt; UserDeleteResponse:
-    return UserDeleteResponse(
-        self.api_call(
-            http_verb=&#34;DELETE&#34;,
-            path=f&#34;Users/{quote(id)}&#34;,
-        )
-    )</code></pre>
-</details>
 </dd>
 <dt id="slack_sdk.scim.SCIMClient.patch_group"><code class="name flex">
-<span>def <span class="ident">patch_group</span></span>(<span>self, id: str, partial_group: Union[Dict[str, Any], <a title="slack_sdk.scim.v1.group.Group" href="v1/group.html#slack_sdk.scim.v1.group.Group">Group</a>]) ‑> <a title="slack_sdk.scim.v1.response.GroupPatchResponse" href="v1/response.html#slack_sdk.scim.v1.response.GroupPatchResponse">GroupPatchResponse</a></span>
+<span>def <span class="ident">patch_group</span></span>(<span>self,<br>id: str,<br>partial_group: Dict[str, Any] | <a title="slack_sdk.scim.v1.group.Group" href="v1/group.html#slack_sdk.scim.v1.group.Group">Group</a>) ‑> <a title="slack_sdk.scim.v1.response.GroupPatchResponse" href="v1/response.html#slack_sdk.scim.v1.response.GroupPatchResponse">GroupPatchResponse</a></span>
 </code></dt>
 <dd>
 <div class="desc"></div>
-<details class="source">
-<summary>
-<span>Expand source code</span>
-</summary>
-<pre><code class="python">def patch_group(self, id: str, partial_group: Union[Dict[str, Any], Group]) -&gt; GroupPatchResponse:
-    return GroupPatchResponse(
-        self.api_call(
-            http_verb=&#34;PATCH&#34;,
-            path=f&#34;Groups/{quote(id)}&#34;,
-            body_params=partial_group.to_dict()
-            if isinstance(partial_group, Group)
-            else _to_dict_without_not_given(partial_group),
-        )
-    )</code></pre>
-</details>
 </dd>
 <dt id="slack_sdk.scim.SCIMClient.patch_user"><code class="name flex">
-<span>def <span class="ident">patch_user</span></span>(<span>self, id: str, partial_user: Union[Dict[str, Any], <a title="slack_sdk.scim.v1.user.User" href="v1/user.html#slack_sdk.scim.v1.user.User">User</a>]) ‑> <a title="slack_sdk.scim.v1.response.UserPatchResponse" href="v1/response.html#slack_sdk.scim.v1.response.UserPatchResponse">UserPatchResponse</a></span>
+<span>def <span class="ident">patch_user</span></span>(<span>self,<br>id: str,<br>partial_user: Dict[str, Any] | <a title="slack_sdk.scim.v1.user.User" href="v1/user.html#slack_sdk.scim.v1.user.User">User</a>) ‑> <a title="slack_sdk.scim.v1.response.UserPatchResponse" href="v1/response.html#slack_sdk.scim.v1.response.UserPatchResponse">UserPatchResponse</a></span>
 </code></dt>
 <dd>
 <div class="desc"></div>
-<details class="source">
-<summary>
-<span>Expand source code</span>
-</summary>
-<pre><code class="python">def patch_user(self, id: str, partial_user: Union[Dict[str, Any], User]) -&gt; UserPatchResponse:
-    return UserPatchResponse(
-        self.api_call(
-            http_verb=&#34;PATCH&#34;,
-            path=f&#34;Users/{quote(id)}&#34;,
-            body_params=partial_user.to_dict()
-            if isinstance(partial_user, User)
-            else _to_dict_without_not_given(partial_user),
-        )
-    )</code></pre>
-</details>
 </dd>
 <dt id="slack_sdk.scim.SCIMClient.read_group"><code class="name flex">
 <span>def <span class="ident">read_group</span></span>(<span>self, id: str) ‑> <a title="slack_sdk.scim.v1.response.ReadGroupResponse" href="v1/response.html#slack_sdk.scim.v1.response.ReadGroupResponse">ReadGroupResponse</a></span>
 </code></dt>
 <dd>
 <div class="desc"></div>
-<details class="source">
-<summary>
-<span>Expand source code</span>
-</summary>
-<pre><code class="python">def read_group(self, id: str) -&gt; ReadGroupResponse:
-    return ReadGroupResponse(self.api_call(http_verb=&#34;GET&#34;, path=f&#34;Groups/{quote(id)}&#34;))</code></pre>
-</details>
 </dd>
 <dt id="slack_sdk.scim.SCIMClient.read_user"><code class="name flex">
 <span>def <span class="ident">read_user</span></span>(<span>self, id: str) ‑> <a title="slack_sdk.scim.v1.response.ReadUserResponse" href="v1/response.html#slack_sdk.scim.v1.response.ReadUserResponse">ReadUserResponse</a></span>
 </code></dt>
 <dd>
 <div class="desc"></div>
-<details class="source">
-<summary>
-<span>Expand source code</span>
-</summary>
-<pre><code class="python">def read_user(self, id: str) -&gt; ReadUserResponse:
-    return ReadUserResponse(self.api_call(http_verb=&#34;GET&#34;, path=f&#34;Users/{quote(id)}&#34;))</code></pre>
-</details>
 </dd>
 <dt id="slack_sdk.scim.SCIMClient.search_groups"><code class="name flex">
-<span>def <span class="ident">search_groups</span></span>(<span>self, *, count: int, start_index: int, filter: Optional[str] = None) ‑> <a title="slack_sdk.scim.v1.response.SearchGroupsResponse" href="v1/response.html#slack_sdk.scim.v1.response.SearchGroupsResponse">SearchGroupsResponse</a></span>
+<span>def <span class="ident">search_groups</span></span>(<span>self, *, count: int, start_index: int, filter: str | None = None) ‑> <a title="slack_sdk.scim.v1.response.SearchGroupsResponse" href="v1/response.html#slack_sdk.scim.v1.response.SearchGroupsResponse">SearchGroupsResponse</a></span>
 </code></dt>
 <dd>
 <div class="desc"></div>
-<details class="source">
-<summary>
-<span>Expand source code</span>
-</summary>
-<pre><code class="python">def search_groups(
-    self,
-    *,
-    # Pagination required as of August 30, 2019.
-    count: int,
-    start_index: int,
-    filter: Optional[str] = None,
-) -&gt; SearchGroupsResponse:
-    return SearchGroupsResponse(
-        self.api_call(
-            http_verb=&#34;GET&#34;,
-            path=&#34;Groups&#34;,
-            query_params={
-                &#34;filter&#34;: filter,
-                &#34;count&#34;: count,
-                &#34;startIndex&#34;: start_index,
-            },
-        )
-    )</code></pre>
-</details>
 </dd>
 <dt id="slack_sdk.scim.SCIMClient.search_users"><code class="name flex">
-<span>def <span class="ident">search_users</span></span>(<span>self, *, count: int, start_index: int, filter: Optional[str] = None) ‑> <a title="slack_sdk.scim.v1.response.SearchUsersResponse" href="v1/response.html#slack_sdk.scim.v1.response.SearchUsersResponse">SearchUsersResponse</a></span>
+<span>def <span class="ident">search_users</span></span>(<span>self, *, count: int, start_index: int, filter: str | None = None) ‑> <a title="slack_sdk.scim.v1.response.SearchUsersResponse" href="v1/response.html#slack_sdk.scim.v1.response.SearchUsersResponse">SearchUsersResponse</a></span>
 </code></dt>
 <dd>
 <div class="desc"></div>
-<details class="source">
-<summary>
-<span>Expand source code</span>
-</summary>
-<pre><code class="python">def search_users(
-    self,
-    *,
-    # Pagination required as of August 30, 2019.
-    count: int,
-    start_index: int,
-    filter: Optional[str] = None,
-) -&gt; SearchUsersResponse:
-    return SearchUsersResponse(
-        self.api_call(
-            http_verb=&#34;GET&#34;,
-            path=&#34;Users&#34;,
-            query_params={
-                &#34;filter&#34;: filter,
-                &#34;count&#34;: count,
-                &#34;startIndex&#34;: start_index,
-            },
-        )
-    )</code></pre>
-</details>
 </dd>
 <dt id="slack_sdk.scim.SCIMClient.update_group"><code class="name flex">
-<span>def <span class="ident">update_group</span></span>(<span>self, group: Union[Dict[str, Any], <a title="slack_sdk.scim.v1.group.Group" href="v1/group.html#slack_sdk.scim.v1.group.Group">Group</a>]) ‑> <a title="slack_sdk.scim.v1.response.GroupUpdateResponse" href="v1/response.html#slack_sdk.scim.v1.response.GroupUpdateResponse">GroupUpdateResponse</a></span>
+<span>def <span class="ident">update_group</span></span>(<span>self,<br>group: Dict[str, Any] | <a title="slack_sdk.scim.v1.group.Group" href="v1/group.html#slack_sdk.scim.v1.group.Group">Group</a>) ‑> <a title="slack_sdk.scim.v1.response.GroupUpdateResponse" href="v1/response.html#slack_sdk.scim.v1.response.GroupUpdateResponse">GroupUpdateResponse</a></span>
 </code></dt>
 <dd>
 <div class="desc"></div>
-<details class="source">
-<summary>
-<span>Expand source code</span>
-</summary>
-<pre><code class="python">def update_group(self, group: Union[Dict[str, Any], Group]) -&gt; GroupUpdateResponse:
-    group_id = group.id if isinstance(group, Group) else group[&#34;id&#34;]
-    return GroupUpdateResponse(
-        self.api_call(
-            http_verb=&#34;PUT&#34;,
-            path=f&#34;Groups/{quote(group_id)}&#34;,
-            body_params=group.to_dict() if isinstance(group, Group) else _to_dict_without_not_given(group),
-        )
-    )</code></pre>
-</details>
 </dd>
 <dt id="slack_sdk.scim.SCIMClient.update_user"><code class="name flex">
-<span>def <span class="ident">update_user</span></span>(<span>self, user: Union[Dict[str, Any], <a title="slack_sdk.scim.v1.user.User" href="v1/user.html#slack_sdk.scim.v1.user.User">User</a>]) ‑> <a title="slack_sdk.scim.v1.response.UserUpdateResponse" href="v1/response.html#slack_sdk.scim.v1.response.UserUpdateResponse">UserUpdateResponse</a></span>
+<span>def <span class="ident">update_user</span></span>(<span>self,<br>user: Dict[str, Any] | <a title="slack_sdk.scim.v1.user.User" href="v1/user.html#slack_sdk.scim.v1.user.User">User</a>) ‑> <a title="slack_sdk.scim.v1.response.UserUpdateResponse" href="v1/response.html#slack_sdk.scim.v1.response.UserUpdateResponse">UserUpdateResponse</a></span>
 </code></dt>
 <dd>
 <div class="desc"></div>
-<details class="source">
-<summary>
-<span>Expand source code</span>
-</summary>
-<pre><code class="python">def update_user(self, user: Union[Dict[str, Any], User]) -&gt; UserUpdateResponse:
-    user_id = user.id if isinstance(user, User) else user[&#34;id&#34;]
-    return UserUpdateResponse(
-        self.api_call(
-            http_verb=&#34;PUT&#34;,
-            path=f&#34;Users/{quote(user_id)}&#34;,
-            body_params=user.to_dict() if isinstance(user, User) else _to_dict_without_not_given(user),
-        )
-    )</code></pre>
-</details>
 </dd>
 </dl>
 </dd>
 <dt id="slack_sdk.scim.SCIMResponse"><code class="flex name class">
 <span>class <span class="ident">SCIMResponse</span></span>
-<span>(</span><span>*, url: str, status_code: int, raw_body: Optional[str], headers: dict)</span>
+<span>(</span><span>*, url: str, status_code: int, raw_body: str | None, headers: dict)</span>
 </code></dt>
 <dd>
 <div class="desc"></div>
@@ -1054,30 +846,30 @@ See <a href="https://api.slack.com/scim">https://api.slack.com/scim</a> for more
 </ul>
 <h3>Class variables</h3>
 <dl>
-<dt id="slack_sdk.scim.SCIMResponse.body"><code class="name">var <span class="ident">body</span> : Optional[Dict[str, Any]]</code></dt>
+<dt id="slack_sdk.scim.SCIMResponse.body"><code class="name">var <span class="ident">body</span> : Dict[str, Any] | None</code></dt>
 <dd>
-<div class="desc"></div>
+<div class="desc"><p>The type of the None singleton.</p></div>
 </dd>
 <dt id="slack_sdk.scim.SCIMResponse.headers"><code class="name">var <span class="ident">headers</span> : Dict[str, Any]</code></dt>
 <dd>
-<div class="desc"></div>
+<div class="desc"><p>The type of the None singleton.</p></div>
 </dd>
-<dt id="slack_sdk.scim.SCIMResponse.raw_body"><code class="name">var <span class="ident">raw_body</span> : Optional[str]</code></dt>
+<dt id="slack_sdk.scim.SCIMResponse.raw_body"><code class="name">var <span class="ident">raw_body</span> : str | None</code></dt>
 <dd>
-<div class="desc"></div>
+<div class="desc"><p>The type of the None singleton.</p></div>
 </dd>
 <dt id="slack_sdk.scim.SCIMResponse.status_code"><code class="name">var <span class="ident">status_code</span> : int</code></dt>
 <dd>
-<div class="desc"></div>
+<div class="desc"><p>The type of the None singleton.</p></div>
 </dd>
 <dt id="slack_sdk.scim.SCIMResponse.url"><code class="name">var <span class="ident">url</span> : str</code></dt>
 <dd>
-<div class="desc"></div>
+<div class="desc"><p>The type of the None singleton.</p></div>
 </dd>
 </dl>
 <h3>Instance variables</h3>
 <dl>
-<dt id="slack_sdk.scim.SCIMResponse.errors"><code class="name">var <span class="ident">errors</span> : Optional[<a title="slack_sdk.scim.v1.response.Errors" href="v1/response.html#slack_sdk.scim.v1.response.Errors">Errors</a>]</code></dt>
+<dt id="slack_sdk.scim.SCIMResponse.errors"><code class="name">prop <span class="ident">errors</span> : <a title="slack_sdk.scim.v1.response.Errors" href="v1/response.html#slack_sdk.scim.v1.response.Errors">Errors</a> | None</code></dt>
 <dd>
 <div class="desc"></div>
 <details class="source">
@@ -1092,7 +884,7 @@ def errors(self) -&gt; Optional[Errors]:  # type: ignore
     return Errors(**errors)</code></pre>
 </details>
 </dd>
-<dt id="slack_sdk.scim.SCIMResponse.snake_cased_body"><code class="name">var <span class="ident">snake_cased_body</span> : Optional[Dict[str, Any]]</code></dt>
+<dt id="slack_sdk.scim.SCIMResponse.snake_cased_body"><code class="name">prop <span class="ident">snake_cased_body</span> : Dict[str, Any] | None</code></dt>
 <dd>
 <div class="desc"></div>
 <details class="source">
@@ -1140,7 +932,7 @@ def snake_cased_body(self) -&gt; Optional[Dict[str, Any]]:  # type: ignore
 </ul>
 <h3>Instance variables</h3>
 <dl>
-<dt id="slack_sdk.scim.SearchGroupsResponse.groups"><code class="name">var <span class="ident">groups</span> : List[<a title="slack_sdk.scim.v1.group.Group" href="v1/group.html#slack_sdk.scim.v1.group.Group">Group</a>]</code></dt>
+<dt id="slack_sdk.scim.SearchGroupsResponse.groups"><code class="name">prop <span class="ident">groups</span> : List[<a title="slack_sdk.scim.v1.group.Group" href="v1/group.html#slack_sdk.scim.v1.group.Group">Group</a>]</code></dt>
 <dd>
 <div class="desc"></div>
 <details class="source">
@@ -1153,6 +945,18 @@ def groups(self) -&gt; List[Group]:  # type: ignore
 </details>
 </dd>
 </dl>
+<h3>Inherited members</h3>
+<ul class="hlist">
+<li><code><b><a title="slack_sdk.scim.v1.response.SCIMResponse" href="v1/response.html#slack_sdk.scim.v1.response.SCIMResponse">SCIMResponse</a></b></code>:
+<ul class="hlist">
+<li><code><a title="slack_sdk.scim.v1.response.SCIMResponse.body" href="v1/response.html#slack_sdk.scim.v1.response.SCIMResponse.body">body</a></code></li>
+<li><code><a title="slack_sdk.scim.v1.response.SCIMResponse.headers" href="v1/response.html#slack_sdk.scim.v1.response.SCIMResponse.headers">headers</a></code></li>
+<li><code><a title="slack_sdk.scim.v1.response.SCIMResponse.raw_body" href="v1/response.html#slack_sdk.scim.v1.response.SCIMResponse.raw_body">raw_body</a></code></li>
+<li><code><a title="slack_sdk.scim.v1.response.SCIMResponse.status_code" href="v1/response.html#slack_sdk.scim.v1.response.SCIMResponse.status_code">status_code</a></code></li>
+<li><code><a title="slack_sdk.scim.v1.response.SCIMResponse.url" href="v1/response.html#slack_sdk.scim.v1.response.SCIMResponse.url">url</a></code></li>
+</ul>
+</li>
+</ul>
 </dd>
 <dt id="slack_sdk.scim.SearchUsersResponse"><code class="flex name class">
 <span>class <span class="ident">SearchUsersResponse</span></span>
@@ -1186,7 +990,7 @@ def groups(self) -&gt; List[Group]:  # type: ignore
 </ul>
 <h3>Instance variables</h3>
 <dl>
-<dt id="slack_sdk.scim.SearchUsersResponse.users"><code class="name">var <span class="ident">users</span> : List[<a title="slack_sdk.scim.v1.user.User" href="v1/user.html#slack_sdk.scim.v1.user.User">User</a>]</code></dt>
+<dt id="slack_sdk.scim.SearchUsersResponse.users"><code class="name">prop <span class="ident">users</span> : List[<a title="slack_sdk.scim.v1.user.User" href="v1/user.html#slack_sdk.scim.v1.user.User">User</a>]</code></dt>
 <dd>
 <div class="desc"></div>
 <details class="source">
@@ -1199,10 +1003,22 @@ def users(self) -&gt; List[User]:  # type: ignore
 </details>
 </dd>
 </dl>
+<h3>Inherited members</h3>
+<ul class="hlist">
+<li><code><b><a title="slack_sdk.scim.v1.response.SCIMResponse" href="v1/response.html#slack_sdk.scim.v1.response.SCIMResponse">SCIMResponse</a></b></code>:
+<ul class="hlist">
+<li><code><a title="slack_sdk.scim.v1.response.SCIMResponse.body" href="v1/response.html#slack_sdk.scim.v1.response.SCIMResponse.body">body</a></code></li>
+<li><code><a title="slack_sdk.scim.v1.response.SCIMResponse.headers" href="v1/response.html#slack_sdk.scim.v1.response.SCIMResponse.headers">headers</a></code></li>
+<li><code><a title="slack_sdk.scim.v1.response.SCIMResponse.raw_body" href="v1/response.html#slack_sdk.scim.v1.response.SCIMResponse.raw_body">raw_body</a></code></li>
+<li><code><a title="slack_sdk.scim.v1.response.SCIMResponse.status_code" href="v1/response.html#slack_sdk.scim.v1.response.SCIMResponse.status_code">status_code</a></code></li>
+<li><code><a title="slack_sdk.scim.v1.response.SCIMResponse.url" href="v1/response.html#slack_sdk.scim.v1.response.SCIMResponse.url">url</a></code></li>
+</ul>
+</li>
+</ul>
 </dd>
 <dt id="slack_sdk.scim.User"><code class="flex name class">
 <span>class <span class="ident">User</span></span>
-<span>(</span><span>*, active: Union[bool, ForwardRef(None), <a title="slack_sdk.scim.v1.default_arg.DefaultArg" href="v1/default_arg.html#slack_sdk.scim.v1.default_arg.DefaultArg">DefaultArg</a>] = &lt;slack_sdk.scim.v1.default_arg.DefaultArg object&gt;, addresses: Union[List[Union[<a title="slack_sdk.scim.v1.user.UserAddress" href="v1/user.html#slack_sdk.scim.v1.user.UserAddress">UserAddress</a>, Dict[str, Any]]], ForwardRef(None), <a title="slack_sdk.scim.v1.default_arg.DefaultArg" href="v1/default_arg.html#slack_sdk.scim.v1.default_arg.DefaultArg">DefaultArg</a>] = &lt;slack_sdk.scim.v1.default_arg.DefaultArg object&gt;, display_name: Union[str, ForwardRef(None), <a title="slack_sdk.scim.v1.default_arg.DefaultArg" href="v1/default_arg.html#slack_sdk.scim.v1.default_arg.DefaultArg">DefaultArg</a>] = &lt;slack_sdk.scim.v1.default_arg.DefaultArg object&gt;, emails: Union[List[Union[<a title="slack_sdk.scim.v1.types.TypeAndValue" href="v1/types.html#slack_sdk.scim.v1.types.TypeAndValue">TypeAndValue</a>, Dict[str, Any]]], ForwardRef(None), <a title="slack_sdk.scim.v1.default_arg.DefaultArg" href="v1/default_arg.html#slack_sdk.scim.v1.default_arg.DefaultArg">DefaultArg</a>] = &lt;slack_sdk.scim.v1.default_arg.DefaultArg object&gt;, external_id: Union[str, ForwardRef(None), <a title="slack_sdk.scim.v1.default_arg.DefaultArg" href="v1/default_arg.html#slack_sdk.scim.v1.default_arg.DefaultArg">DefaultArg</a>] = &lt;slack_sdk.scim.v1.default_arg.DefaultArg object&gt;, groups: Union[List[Union[<a title="slack_sdk.scim.v1.user.UserGroup" href="v1/user.html#slack_sdk.scim.v1.user.UserGroup">UserGroup</a>, Dict[str, Any]]], ForwardRef(None), <a title="slack_sdk.scim.v1.default_arg.DefaultArg" href="v1/default_arg.html#slack_sdk.scim.v1.default_arg.DefaultArg">DefaultArg</a>] = &lt;slack_sdk.scim.v1.default_arg.DefaultArg object&gt;, id: Union[str, ForwardRef(None), <a title="slack_sdk.scim.v1.default_arg.DefaultArg" href="v1/default_arg.html#slack_sdk.scim.v1.default_arg.DefaultArg">DefaultArg</a>] = &lt;slack_sdk.scim.v1.default_arg.DefaultArg object&gt;, meta: Union[<a title="slack_sdk.scim.v1.user.UserMeta" href="v1/user.html#slack_sdk.scim.v1.user.UserMeta">UserMeta</a>, Dict[str, Any], ForwardRef(None), <a title="slack_sdk.scim.v1.default_arg.DefaultArg" href="v1/default_arg.html#slack_sdk.scim.v1.default_arg.DefaultArg">DefaultArg</a>] = &lt;slack_sdk.scim.v1.default_arg.DefaultArg object&gt;, name: Union[<a title="slack_sdk.scim.v1.user.UserName" href="v1/user.html#slack_sdk.scim.v1.user.UserName">UserName</a>, Dict[str, Any], ForwardRef(None), <a title="slack_sdk.scim.v1.default_arg.DefaultArg" href="v1/default_arg.html#slack_sdk.scim.v1.default_arg.DefaultArg">DefaultArg</a>] = &lt;slack_sdk.scim.v1.default_arg.DefaultArg object&gt;, nick_name: Union[str, ForwardRef(None), <a title="slack_sdk.scim.v1.default_arg.DefaultArg" href="v1/default_arg.html#slack_sdk.scim.v1.default_arg.DefaultArg">DefaultArg</a>] = &lt;slack_sdk.scim.v1.default_arg.DefaultArg object&gt;, phone_numbers: Union[List[Union[<a title="slack_sdk.scim.v1.types.TypeAndValue" href="v1/types.html#slack_sdk.scim.v1.types.TypeAndValue">TypeAndValue</a>, Dict[str, Any]]], ForwardRef(None), <a title="slack_sdk.scim.v1.default_arg.DefaultArg" href="v1/default_arg.html#slack_sdk.scim.v1.default_arg.DefaultArg">DefaultArg</a>] = &lt;slack_sdk.scim.v1.default_arg.DefaultArg object&gt;, photos: Union[List[Union[<a title="slack_sdk.scim.v1.user.UserPhoto" href="v1/user.html#slack_sdk.scim.v1.user.UserPhoto">UserPhoto</a>, Dict[str, Any]]], ForwardRef(None), <a title="slack_sdk.scim.v1.default_arg.DefaultArg" href="v1/default_arg.html#slack_sdk.scim.v1.default_arg.DefaultArg">DefaultArg</a>] = &lt;slack_sdk.scim.v1.default_arg.DefaultArg object&gt;, profile_url: Union[str, ForwardRef(None), <a title="slack_sdk.scim.v1.default_arg.DefaultArg" href="v1/default_arg.html#slack_sdk.scim.v1.default_arg.DefaultArg">DefaultArg</a>] = &lt;slack_sdk.scim.v1.default_arg.DefaultArg object&gt;, roles: Union[List[Union[<a title="slack_sdk.scim.v1.types.TypeAndValue" href="v1/types.html#slack_sdk.scim.v1.types.TypeAndValue">TypeAndValue</a>, Dict[str, Any]]], ForwardRef(None), <a title="slack_sdk.scim.v1.default_arg.DefaultArg" href="v1/default_arg.html#slack_sdk.scim.v1.default_arg.DefaultArg">DefaultArg</a>] = &lt;slack_sdk.scim.v1.default_arg.DefaultArg object&gt;, schemas: Union[List[str], ForwardRef(None), <a title="slack_sdk.scim.v1.default_arg.DefaultArg" href="v1/default_arg.html#slack_sdk.scim.v1.default_arg.DefaultArg">DefaultArg</a>] = &lt;slack_sdk.scim.v1.default_arg.DefaultArg object&gt;, timezone: Union[str, ForwardRef(None), <a title="slack_sdk.scim.v1.default_arg.DefaultArg" href="v1/default_arg.html#slack_sdk.scim.v1.default_arg.DefaultArg">DefaultArg</a>] = &lt;slack_sdk.scim.v1.default_arg.DefaultArg object&gt;, title: Union[str, ForwardRef(None), <a title="slack_sdk.scim.v1.default_arg.DefaultArg" href="v1/default_arg.html#slack_sdk.scim.v1.default_arg.DefaultArg">DefaultArg</a>] = &lt;slack_sdk.scim.v1.default_arg.DefaultArg object&gt;, user_name: Union[str, ForwardRef(None), <a title="slack_sdk.scim.v1.default_arg.DefaultArg" href="v1/default_arg.html#slack_sdk.scim.v1.default_arg.DefaultArg">DefaultArg</a>] = &lt;slack_sdk.scim.v1.default_arg.DefaultArg object&gt;, **kwargs)</span>
+<span>(</span><span>*,<br>active: bool | <a title="slack_sdk.scim.v1.default_arg.DefaultArg" href="v1/default_arg.html#slack_sdk.scim.v1.default_arg.DefaultArg">DefaultArg</a> | None = &lt;slack_sdk.scim.v1.default_arg.DefaultArg object&gt;,<br>addresses: List[<a title="slack_sdk.scim.v1.user.UserAddress" href="v1/user.html#slack_sdk.scim.v1.user.UserAddress">UserAddress</a> | Dict[str, Any]] | <a title="slack_sdk.scim.v1.default_arg.DefaultArg" href="v1/default_arg.html#slack_sdk.scim.v1.default_arg.DefaultArg">DefaultArg</a> | None = &lt;slack_sdk.scim.v1.default_arg.DefaultArg object&gt;,<br>display_name: str | <a title="slack_sdk.scim.v1.default_arg.DefaultArg" href="v1/default_arg.html#slack_sdk.scim.v1.default_arg.DefaultArg">DefaultArg</a> | None = &lt;slack_sdk.scim.v1.default_arg.DefaultArg object&gt;,<br>emails: List[<a title="slack_sdk.scim.v1.types.TypeAndValue" href="v1/types.html#slack_sdk.scim.v1.types.TypeAndValue">TypeAndValue</a> | Dict[str, Any]] | <a title="slack_sdk.scim.v1.default_arg.DefaultArg" href="v1/default_arg.html#slack_sdk.scim.v1.default_arg.DefaultArg">DefaultArg</a> | None = &lt;slack_sdk.scim.v1.default_arg.DefaultArg object&gt;,<br>external_id: str | <a title="slack_sdk.scim.v1.default_arg.DefaultArg" href="v1/default_arg.html#slack_sdk.scim.v1.default_arg.DefaultArg">DefaultArg</a> | None = &lt;slack_sdk.scim.v1.default_arg.DefaultArg object&gt;,<br>groups: List[<a title="slack_sdk.scim.v1.user.UserGroup" href="v1/user.html#slack_sdk.scim.v1.user.UserGroup">UserGroup</a> | Dict[str, Any]] | <a title="slack_sdk.scim.v1.default_arg.DefaultArg" href="v1/default_arg.html#slack_sdk.scim.v1.default_arg.DefaultArg">DefaultArg</a> | None = &lt;slack_sdk.scim.v1.default_arg.DefaultArg object&gt;,<br>id: str | <a title="slack_sdk.scim.v1.default_arg.DefaultArg" href="v1/default_arg.html#slack_sdk.scim.v1.default_arg.DefaultArg">DefaultArg</a> | None = &lt;slack_sdk.scim.v1.default_arg.DefaultArg object&gt;,<br>meta: <a title="slack_sdk.scim.v1.user.UserMeta" href="v1/user.html#slack_sdk.scim.v1.user.UserMeta">UserMeta</a> | Dict[str, Any] | <a title="slack_sdk.scim.v1.default_arg.DefaultArg" href="v1/default_arg.html#slack_sdk.scim.v1.default_arg.DefaultArg">DefaultArg</a> | None = &lt;slack_sdk.scim.v1.default_arg.DefaultArg object&gt;,<br>name: <a title="slack_sdk.scim.v1.user.UserName" href="v1/user.html#slack_sdk.scim.v1.user.UserName">UserName</a> | Dict[str, Any] | <a title="slack_sdk.scim.v1.default_arg.DefaultArg" href="v1/default_arg.html#slack_sdk.scim.v1.default_arg.DefaultArg">DefaultArg</a> | None = &lt;slack_sdk.scim.v1.default_arg.DefaultArg object&gt;,<br>nick_name: str | <a title="slack_sdk.scim.v1.default_arg.DefaultArg" href="v1/default_arg.html#slack_sdk.scim.v1.default_arg.DefaultArg">DefaultArg</a> | None = &lt;slack_sdk.scim.v1.default_arg.DefaultArg object&gt;,<br>phone_numbers: List[<a title="slack_sdk.scim.v1.types.TypeAndValue" href="v1/types.html#slack_sdk.scim.v1.types.TypeAndValue">TypeAndValue</a> | Dict[str, Any]] | <a title="slack_sdk.scim.v1.default_arg.DefaultArg" href="v1/default_arg.html#slack_sdk.scim.v1.default_arg.DefaultArg">DefaultArg</a> | None = &lt;slack_sdk.scim.v1.default_arg.DefaultArg object&gt;,<br>photos: List[<a title="slack_sdk.scim.v1.user.UserPhoto" href="v1/user.html#slack_sdk.scim.v1.user.UserPhoto">UserPhoto</a> | Dict[str, Any]] | <a title="slack_sdk.scim.v1.default_arg.DefaultArg" href="v1/default_arg.html#slack_sdk.scim.v1.default_arg.DefaultArg">DefaultArg</a> | None = &lt;slack_sdk.scim.v1.default_arg.DefaultArg object&gt;,<br>profile_url: str | <a title="slack_sdk.scim.v1.default_arg.DefaultArg" href="v1/default_arg.html#slack_sdk.scim.v1.default_arg.DefaultArg">DefaultArg</a> | None = &lt;slack_sdk.scim.v1.default_arg.DefaultArg object&gt;,<br>roles: List[<a title="slack_sdk.scim.v1.types.TypeAndValue" href="v1/types.html#slack_sdk.scim.v1.types.TypeAndValue">TypeAndValue</a> | Dict[str, Any]] | <a title="slack_sdk.scim.v1.default_arg.DefaultArg" href="v1/default_arg.html#slack_sdk.scim.v1.default_arg.DefaultArg">DefaultArg</a> | None = &lt;slack_sdk.scim.v1.default_arg.DefaultArg object&gt;,<br>schemas: List[str] | <a title="slack_sdk.scim.v1.default_arg.DefaultArg" href="v1/default_arg.html#slack_sdk.scim.v1.default_arg.DefaultArg">DefaultArg</a> | None = &lt;slack_sdk.scim.v1.default_arg.DefaultArg object&gt;,<br>timezone: str | <a title="slack_sdk.scim.v1.default_arg.DefaultArg" href="v1/default_arg.html#slack_sdk.scim.v1.default_arg.DefaultArg">DefaultArg</a> | None = &lt;slack_sdk.scim.v1.default_arg.DefaultArg object&gt;,<br>title: str | <a title="slack_sdk.scim.v1.default_arg.DefaultArg" href="v1/default_arg.html#slack_sdk.scim.v1.default_arg.DefaultArg">DefaultArg</a> | None = &lt;slack_sdk.scim.v1.default_arg.DefaultArg object&gt;,<br>user_name: str | <a title="slack_sdk.scim.v1.default_arg.DefaultArg" href="v1/default_arg.html#slack_sdk.scim.v1.default_arg.DefaultArg">DefaultArg</a> | None = &lt;slack_sdk.scim.v1.default_arg.DefaultArg object&gt;,<br>**kwargs)</span>
 </code></dt>
 <dd>
 <div class="desc"></div>
@@ -1299,81 +1115,81 @@ def users(self) -&gt; List[User]:  # type: ignore
 </details>
 <h3>Class variables</h3>
 <dl>
-<dt id="slack_sdk.scim.User.active"><code class="name">var <span class="ident">active</span> : Union[bool, ForwardRef(None), <a title="slack_sdk.scim.v1.default_arg.DefaultArg" href="v1/default_arg.html#slack_sdk.scim.v1.default_arg.DefaultArg">DefaultArg</a>]</code></dt>
+<dt id="slack_sdk.scim.User.active"><code class="name">var <span class="ident">active</span> : bool | <a title="slack_sdk.scim.v1.default_arg.DefaultArg" href="v1/default_arg.html#slack_sdk.scim.v1.default_arg.DefaultArg">DefaultArg</a> | None</code></dt>
 <dd>
-<div class="desc"></div>
+<div class="desc"><p>The type of the None singleton.</p></div>
 </dd>
-<dt id="slack_sdk.scim.User.addresses"><code class="name">var <span class="ident">addresses</span> : Union[List[<a title="slack_sdk.scim.v1.user.UserAddress" href="v1/user.html#slack_sdk.scim.v1.user.UserAddress">UserAddress</a>], ForwardRef(None), <a title="slack_sdk.scim.v1.default_arg.DefaultArg" href="v1/default_arg.html#slack_sdk.scim.v1.default_arg.DefaultArg">DefaultArg</a>]</code></dt>
+<dt id="slack_sdk.scim.User.addresses"><code class="name">var <span class="ident">addresses</span> : List[<a title="slack_sdk.scim.v1.user.UserAddress" href="v1/user.html#slack_sdk.scim.v1.user.UserAddress">UserAddress</a>] | <a title="slack_sdk.scim.v1.default_arg.DefaultArg" href="v1/default_arg.html#slack_sdk.scim.v1.default_arg.DefaultArg">DefaultArg</a> | None</code></dt>
 <dd>
-<div class="desc"></div>
+<div class="desc"><p>The type of the None singleton.</p></div>
 </dd>
-<dt id="slack_sdk.scim.User.display_name"><code class="name">var <span class="ident">display_name</span> : Union[str, ForwardRef(None), <a title="slack_sdk.scim.v1.default_arg.DefaultArg" href="v1/default_arg.html#slack_sdk.scim.v1.default_arg.DefaultArg">DefaultArg</a>]</code></dt>
+<dt id="slack_sdk.scim.User.display_name"><code class="name">var <span class="ident">display_name</span> : str | <a title="slack_sdk.scim.v1.default_arg.DefaultArg" href="v1/default_arg.html#slack_sdk.scim.v1.default_arg.DefaultArg">DefaultArg</a> | None</code></dt>
 <dd>
-<div class="desc"></div>
+<div class="desc"><p>The type of the None singleton.</p></div>
 </dd>
-<dt id="slack_sdk.scim.User.emails"><code class="name">var <span class="ident">emails</span> : Union[List[<a title="slack_sdk.scim.v1.types.TypeAndValue" href="v1/types.html#slack_sdk.scim.v1.types.TypeAndValue">TypeAndValue</a>], ForwardRef(None), <a title="slack_sdk.scim.v1.default_arg.DefaultArg" href="v1/default_arg.html#slack_sdk.scim.v1.default_arg.DefaultArg">DefaultArg</a>]</code></dt>
+<dt id="slack_sdk.scim.User.emails"><code class="name">var <span class="ident">emails</span> : List[<a title="slack_sdk.scim.v1.types.TypeAndValue" href="v1/types.html#slack_sdk.scim.v1.types.TypeAndValue">TypeAndValue</a>] | <a title="slack_sdk.scim.v1.default_arg.DefaultArg" href="v1/default_arg.html#slack_sdk.scim.v1.default_arg.DefaultArg">DefaultArg</a> | None</code></dt>
 <dd>
-<div class="desc"></div>
+<div class="desc"><p>The type of the None singleton.</p></div>
 </dd>
-<dt id="slack_sdk.scim.User.external_id"><code class="name">var <span class="ident">external_id</span> : Union[str, ForwardRef(None), <a title="slack_sdk.scim.v1.default_arg.DefaultArg" href="v1/default_arg.html#slack_sdk.scim.v1.default_arg.DefaultArg">DefaultArg</a>]</code></dt>
+<dt id="slack_sdk.scim.User.external_id"><code class="name">var <span class="ident">external_id</span> : str | <a title="slack_sdk.scim.v1.default_arg.DefaultArg" href="v1/default_arg.html#slack_sdk.scim.v1.default_arg.DefaultArg">DefaultArg</a> | None</code></dt>
 <dd>
-<div class="desc"></div>
+<div class="desc"><p>The type of the None singleton.</p></div>
 </dd>
-<dt id="slack_sdk.scim.User.groups"><code class="name">var <span class="ident">groups</span> : Union[List[<a title="slack_sdk.scim.v1.user.UserGroup" href="v1/user.html#slack_sdk.scim.v1.user.UserGroup">UserGroup</a>], ForwardRef(None), <a title="slack_sdk.scim.v1.default_arg.DefaultArg" href="v1/default_arg.html#slack_sdk.scim.v1.default_arg.DefaultArg">DefaultArg</a>]</code></dt>
+<dt id="slack_sdk.scim.User.groups"><code class="name">var <span class="ident">groups</span> : List[<a title="slack_sdk.scim.v1.user.UserGroup" href="v1/user.html#slack_sdk.scim.v1.user.UserGroup">UserGroup</a>] | <a title="slack_sdk.scim.v1.default_arg.DefaultArg" href="v1/default_arg.html#slack_sdk.scim.v1.default_arg.DefaultArg">DefaultArg</a> | None</code></dt>
 <dd>
-<div class="desc"></div>
+<div class="desc"><p>The type of the None singleton.</p></div>
 </dd>
-<dt id="slack_sdk.scim.User.id"><code class="name">var <span class="ident">id</span> : Union[str, ForwardRef(None), <a title="slack_sdk.scim.v1.default_arg.DefaultArg" href="v1/default_arg.html#slack_sdk.scim.v1.default_arg.DefaultArg">DefaultArg</a>]</code></dt>
+<dt id="slack_sdk.scim.User.id"><code class="name">var <span class="ident">id</span> : str | <a title="slack_sdk.scim.v1.default_arg.DefaultArg" href="v1/default_arg.html#slack_sdk.scim.v1.default_arg.DefaultArg">DefaultArg</a> | None</code></dt>
 <dd>
-<div class="desc"></div>
+<div class="desc"><p>The type of the None singleton.</p></div>
 </dd>
-<dt id="slack_sdk.scim.User.meta"><code class="name">var <span class="ident">meta</span> : Union[<a title="slack_sdk.scim.v1.user.UserMeta" href="v1/user.html#slack_sdk.scim.v1.user.UserMeta">UserMeta</a>, ForwardRef(None), <a title="slack_sdk.scim.v1.default_arg.DefaultArg" href="v1/default_arg.html#slack_sdk.scim.v1.default_arg.DefaultArg">DefaultArg</a>]</code></dt>
+<dt id="slack_sdk.scim.User.meta"><code class="name">var <span class="ident">meta</span> : <a title="slack_sdk.scim.v1.user.UserMeta" href="v1/user.html#slack_sdk.scim.v1.user.UserMeta">UserMeta</a> | <a title="slack_sdk.scim.v1.default_arg.DefaultArg" href="v1/default_arg.html#slack_sdk.scim.v1.default_arg.DefaultArg">DefaultArg</a> | None</code></dt>
 <dd>
-<div class="desc"></div>
+<div class="desc"><p>The type of the None singleton.</p></div>
 </dd>
-<dt id="slack_sdk.scim.User.name"><code class="name">var <span class="ident">name</span> : Union[<a title="slack_sdk.scim.v1.user.UserName" href="v1/user.html#slack_sdk.scim.v1.user.UserName">UserName</a>, ForwardRef(None), <a title="slack_sdk.scim.v1.default_arg.DefaultArg" href="v1/default_arg.html#slack_sdk.scim.v1.default_arg.DefaultArg">DefaultArg</a>]</code></dt>
+<dt id="slack_sdk.scim.User.name"><code class="name">var <span class="ident">name</span> : <a title="slack_sdk.scim.v1.user.UserName" href="v1/user.html#slack_sdk.scim.v1.user.UserName">UserName</a> | <a title="slack_sdk.scim.v1.default_arg.DefaultArg" href="v1/default_arg.html#slack_sdk.scim.v1.default_arg.DefaultArg">DefaultArg</a> | None</code></dt>
 <dd>
-<div class="desc"></div>
+<div class="desc"><p>The type of the None singleton.</p></div>
 </dd>
-<dt id="slack_sdk.scim.User.nick_name"><code class="name">var <span class="ident">nick_name</span> : Union[str, ForwardRef(None), <a title="slack_sdk.scim.v1.default_arg.DefaultArg" href="v1/default_arg.html#slack_sdk.scim.v1.default_arg.DefaultArg">DefaultArg</a>]</code></dt>
+<dt id="slack_sdk.scim.User.nick_name"><code class="name">var <span class="ident">nick_name</span> : str | <a title="slack_sdk.scim.v1.default_arg.DefaultArg" href="v1/default_arg.html#slack_sdk.scim.v1.default_arg.DefaultArg">DefaultArg</a> | None</code></dt>
 <dd>
-<div class="desc"></div>
+<div class="desc"><p>The type of the None singleton.</p></div>
 </dd>
-<dt id="slack_sdk.scim.User.phone_numbers"><code class="name">var <span class="ident">phone_numbers</span> : Union[List[<a title="slack_sdk.scim.v1.types.TypeAndValue" href="v1/types.html#slack_sdk.scim.v1.types.TypeAndValue">TypeAndValue</a>], ForwardRef(None), <a title="slack_sdk.scim.v1.default_arg.DefaultArg" href="v1/default_arg.html#slack_sdk.scim.v1.default_arg.DefaultArg">DefaultArg</a>]</code></dt>
+<dt id="slack_sdk.scim.User.phone_numbers"><code class="name">var <span class="ident">phone_numbers</span> : List[<a title="slack_sdk.scim.v1.types.TypeAndValue" href="v1/types.html#slack_sdk.scim.v1.types.TypeAndValue">TypeAndValue</a>] | <a title="slack_sdk.scim.v1.default_arg.DefaultArg" href="v1/default_arg.html#slack_sdk.scim.v1.default_arg.DefaultArg">DefaultArg</a> | None</code></dt>
 <dd>
-<div class="desc"></div>
+<div class="desc"><p>The type of the None singleton.</p></div>
 </dd>
-<dt id="slack_sdk.scim.User.photos"><code class="name">var <span class="ident">photos</span> : Union[List[<a title="slack_sdk.scim.v1.user.UserPhoto" href="v1/user.html#slack_sdk.scim.v1.user.UserPhoto">UserPhoto</a>], ForwardRef(None), <a title="slack_sdk.scim.v1.default_arg.DefaultArg" href="v1/default_arg.html#slack_sdk.scim.v1.default_arg.DefaultArg">DefaultArg</a>]</code></dt>
+<dt id="slack_sdk.scim.User.photos"><code class="name">var <span class="ident">photos</span> : List[<a title="slack_sdk.scim.v1.user.UserPhoto" href="v1/user.html#slack_sdk.scim.v1.user.UserPhoto">UserPhoto</a>] | <a title="slack_sdk.scim.v1.default_arg.DefaultArg" href="v1/default_arg.html#slack_sdk.scim.v1.default_arg.DefaultArg">DefaultArg</a> | None</code></dt>
 <dd>
-<div class="desc"></div>
+<div class="desc"><p>The type of the None singleton.</p></div>
 </dd>
-<dt id="slack_sdk.scim.User.profile_url"><code class="name">var <span class="ident">profile_url</span> : Union[str, ForwardRef(None), <a title="slack_sdk.scim.v1.default_arg.DefaultArg" href="v1/default_arg.html#slack_sdk.scim.v1.default_arg.DefaultArg">DefaultArg</a>]</code></dt>
+<dt id="slack_sdk.scim.User.profile_url"><code class="name">var <span class="ident">profile_url</span> : str | <a title="slack_sdk.scim.v1.default_arg.DefaultArg" href="v1/default_arg.html#slack_sdk.scim.v1.default_arg.DefaultArg">DefaultArg</a> | None</code></dt>
 <dd>
-<div class="desc"></div>
+<div class="desc"><p>The type of the None singleton.</p></div>
 </dd>
-<dt id="slack_sdk.scim.User.roles"><code class="name">var <span class="ident">roles</span> : Union[List[<a title="slack_sdk.scim.v1.types.TypeAndValue" href="v1/types.html#slack_sdk.scim.v1.types.TypeAndValue">TypeAndValue</a>], ForwardRef(None), <a title="slack_sdk.scim.v1.default_arg.DefaultArg" href="v1/default_arg.html#slack_sdk.scim.v1.default_arg.DefaultArg">DefaultArg</a>]</code></dt>
+<dt id="slack_sdk.scim.User.roles"><code class="name">var <span class="ident">roles</span> : List[<a title="slack_sdk.scim.v1.types.TypeAndValue" href="v1/types.html#slack_sdk.scim.v1.types.TypeAndValue">TypeAndValue</a>] | <a title="slack_sdk.scim.v1.default_arg.DefaultArg" href="v1/default_arg.html#slack_sdk.scim.v1.default_arg.DefaultArg">DefaultArg</a> | None</code></dt>
 <dd>
-<div class="desc"></div>
+<div class="desc"><p>The type of the None singleton.</p></div>
 </dd>
-<dt id="slack_sdk.scim.User.schemas"><code class="name">var <span class="ident">schemas</span> : Union[List[str], ForwardRef(None), <a title="slack_sdk.scim.v1.default_arg.DefaultArg" href="v1/default_arg.html#slack_sdk.scim.v1.default_arg.DefaultArg">DefaultArg</a>]</code></dt>
+<dt id="slack_sdk.scim.User.schemas"><code class="name">var <span class="ident">schemas</span> : List[str] | <a title="slack_sdk.scim.v1.default_arg.DefaultArg" href="v1/default_arg.html#slack_sdk.scim.v1.default_arg.DefaultArg">DefaultArg</a> | None</code></dt>
 <dd>
-<div class="desc"></div>
+<div class="desc"><p>The type of the None singleton.</p></div>
 </dd>
-<dt id="slack_sdk.scim.User.timezone"><code class="name">var <span class="ident">timezone</span> : Union[str, ForwardRef(None), <a title="slack_sdk.scim.v1.default_arg.DefaultArg" href="v1/default_arg.html#slack_sdk.scim.v1.default_arg.DefaultArg">DefaultArg</a>]</code></dt>
+<dt id="slack_sdk.scim.User.timezone"><code class="name">var <span class="ident">timezone</span> : str | <a title="slack_sdk.scim.v1.default_arg.DefaultArg" href="v1/default_arg.html#slack_sdk.scim.v1.default_arg.DefaultArg">DefaultArg</a> | None</code></dt>
 <dd>
-<div class="desc"></div>
+<div class="desc"><p>The type of the None singleton.</p></div>
 </dd>
-<dt id="slack_sdk.scim.User.title"><code class="name">var <span class="ident">title</span> : Union[str, ForwardRef(None), <a title="slack_sdk.scim.v1.default_arg.DefaultArg" href="v1/default_arg.html#slack_sdk.scim.v1.default_arg.DefaultArg">DefaultArg</a>]</code></dt>
+<dt id="slack_sdk.scim.User.title"><code class="name">var <span class="ident">title</span> : str | <a title="slack_sdk.scim.v1.default_arg.DefaultArg" href="v1/default_arg.html#slack_sdk.scim.v1.default_arg.DefaultArg">DefaultArg</a> | None</code></dt>
 <dd>
-<div class="desc"></div>
+<div class="desc"><p>The type of the None singleton.</p></div>
 </dd>
 <dt id="slack_sdk.scim.User.unknown_fields"><code class="name">var <span class="ident">unknown_fields</span> : Dict[str, Any]</code></dt>
 <dd>
-<div class="desc"></div>
+<div class="desc"><p>The type of the None singleton.</p></div>
 </dd>
-<dt id="slack_sdk.scim.User.user_name"><code class="name">var <span class="ident">user_name</span> : Union[str, ForwardRef(None), <a title="slack_sdk.scim.v1.default_arg.DefaultArg" href="v1/default_arg.html#slack_sdk.scim.v1.default_arg.DefaultArg">DefaultArg</a>]</code></dt>
+<dt id="slack_sdk.scim.User.user_name"><code class="name">var <span class="ident">user_name</span> : str | <a title="slack_sdk.scim.v1.default_arg.DefaultArg" href="v1/default_arg.html#slack_sdk.scim.v1.default_arg.DefaultArg">DefaultArg</a> | None</code></dt>
 <dd>
-<div class="desc"></div>
+<div class="desc"><p>The type of the None singleton.</p></div>
 </dd>
 </dl>
 <h3>Methods</h3>
@@ -1383,13 +1199,6 @@ def users(self) -&gt; List[User]:  # type: ignore
 </code></dt>
 <dd>
 <div class="desc"></div>
-<details class="source">
-<summary>
-<span>Expand source code</span>
-</summary>
-<pre><code class="python">def to_dict(self):
-    return _to_dict_without_not_given(self)</code></pre>
-</details>
 </dd>
 </dl>
 </dd>
@@ -1397,7 +1206,6 @@ def users(self) -&gt; List[User]:  # type: ignore
 </section>
 </article>
 <nav id="sidebar">
-<h1>Index</h1>
 <div class="toc">
 <ul></ul>
 </div>
@@ -1521,7 +1329,7 @@ def users(self) -&gt; List[User]:  # type: ignore
 </nav>
 </main>
 <footer id="footer">
-<p>Generated by <a href="https://pdoc3.github.io/pdoc" title="pdoc: Python API documentation generator"><cite>pdoc</cite> 0.10.0</a>.</p>
+<p>Generated by <a href="https://pdoc3.github.io/pdoc" title="pdoc: Python API documentation generator"><cite>pdoc</cite> 0.11.3</a>.</p>
 </footer>
 </body>
 </html>

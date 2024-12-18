@@ -8,6 +8,7 @@
 import asyncio
 import logging
 import time
+from asyncio import AbstractEventLoop
 from asyncio import Future, Lock
 from asyncio import Queue
 from logging import Logger
@@ -79,6 +80,7 @@ class SocketModeClient(AsyncBaseSocketModeClient):
         on_message_listeners: Optional[List[Callable[[WSMessage], Awaitable[None]]]] = None,
         on_error_listeners: Optional[List[Callable[[WSMessage], Awaitable[None]]]] = None,
         on_close_listeners: Optional[List[Callable[[WSMessage], Awaitable[None]]]] = None,
+        loop: Optional[AbstractEventLoop] = None,
     ):
         """Socket Mode client
 
@@ -93,6 +95,7 @@ class SocketModeClient(AsyncBaseSocketModeClient):
             on_message_listeners: listener functions for on_message
             on_error_listeners: listener functions for on_error
             on_close_listeners: listener functions for on_close
+            loop: an existing asyncio event loop
         """
         self.app_token = app_token
         self.logger = logger or logging.getLogger(__name__)
@@ -124,7 +127,7 @@ class SocketModeClient(AsyncBaseSocketModeClient):
         # over the lifetime of your application,
         # it is suggested you use a single session for the lifetime of your application
         # to benefit from connection pooling.
-        self.aiohttp_client_session = aiohttp.ClientSession()
+        self.aiohttp_client_session = aiohttp.ClientSession(loop=loop)
 
         self.on_message_listeners = on_message_listeners or []
         self.on_error_listeners = on_error_listeners or []
@@ -172,7 +175,7 @@ class SocketModeClient(AsyncBaseSocketModeClient):
                         if self.last_ping_pong_time is None:
                             self.last_ping_pong_time = float(t)
                         try:
-                            await session.ping(f"sdk-ping-pong:{t}")
+                            await session.ping(f"sdk-ping-pong:{t}".encode("utf-8"))
                         except Exception as e:
                             # The ping() method can fail for some reason.
                             # To establish a new connection even in this scenario,
@@ -387,7 +390,7 @@ class SocketModeClient(AsyncBaseSocketModeClient):
                 if self.logger.level <= logging.DEBUG:
                     self.logger.debug(f"Sending a ping message with the newly established connection ({session_id})...")
                 t = time.time()
-                await self.current_session.ping(f"sdk-ping-pong:{t}")
+                await self.current_session.ping(f"sdk-ping-pong:{t}".encode("utf-8"))
 
                 if self.current_session_monitor is not None:
                     self.current_session_monitor.cancel()
